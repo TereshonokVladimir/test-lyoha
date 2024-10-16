@@ -29,14 +29,14 @@ const Counter: React.FC = () => {
       <Box display="flex" gap={2}>
         <Button 
           variant="contained" 
-          color="primary" 
+          color="success" 
           onClick={increment}
         >
           Increment
         </Button>
         <Button 
           variant="contained" 
-          color="secondary" 
+          color="warning" 
           onClick={decrement}
         >
           Decrement
