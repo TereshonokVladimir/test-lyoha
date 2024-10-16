@@ -10,11 +10,19 @@ interface User {
 
 interface UserTableRowProps {
   user: User;
+  rowIndex: number;
 }
 
-const UserTableRow: React.FC<UserTableRowProps> = ({ user }) => {
+const UserTableRow: React.FC<UserTableRowProps> = ({ user, rowIndex }) => {
   return (
-    <TableRow>
+    <TableRow
+      sx={{
+        backgroundColor: rowIndex % 2 === 0 ? 'grey.100' : 'white',
+        '&:hover': {
+          backgroundColor: 'primary.light',
+        }
+      }}
+    >
       <TableCell>{user.id}</TableCell>
       <TableCell>{user.name}</TableCell>
       <TableCell>{user.username}</TableCell>
